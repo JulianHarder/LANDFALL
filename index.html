@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Julian Harder">
+  <title>LANDFALL – Die Reise eines Anrufs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>LANDFALL</h1>
+    <span class="sub">Die Reise eines Anrufs über echte Internet-Kabel</span>
+    <span class="status" id="status"></span>
+  </header>
+
+  <form class="controls" id="controls">
+    <label>Von <select id="from"></select></label>
+    <label>Nach <select id="to"></select></label>
+    <button type="submit" id="connect">Verbinden</button>
+    <button type="button" id="replay" class="secondary" disabled>Nochmal</button>
+    <button type="button" id="disconnect" class="secondary" disabled>Trennen</button>
+  </form>
+
+  <div class="content">
+    <main class="stage" id="stage">
+      <!-- Schicht 1: Länder, Kabel, Städte (wird nur bei Größenänderung neu gezeichnet) -->
+      <canvas id="bg" class="layer"></canvas>
+      <!-- Schicht 2: Route und bewegte Elemente (Paket, Hover) -->
+      <canvas id="fg" class="layer"></canvas>
+      <div class="zoomctl" role="group" aria-label="Zoom">
+        <button type="button" id="zoomIn" title="Hineinzoomen" aria-label="Hineinzoomen">+</button>
+        <button type="button" id="zoomOut" title="Herauszoomen" aria-label="Herauszoomen">−</button>
+        <button type="button" id="zoomReset" title="Ansicht zurücksetzen" aria-label="Ansicht zurücksetzen">⌂</button>
+      </div>
+    </main>
+
+    <aside class="panel" id="panel" aria-live="polite">
+      <section class="card" id="cableCard" hidden>
+        <h2 id="cableName"></h2>
+        <dl class="facts" id="cableFacts"></dl>
+      </section>
+
+      <h2>Route</h2>
+      <p class="hint" id="hint">Wähle Start und Ziel und klicke auf „Verbinden“. Ein Klick auf ein Kabel zeigt Infos dazu.</p>
+      <div id="result" hidden>
+        <dl class="totals">
+          <div><dt>Strecke</dt><dd id="totKm">–</dd></div>
+          <div><dt>Laufzeit (einfach)</dt><dd id="totMs">–</dd></div>
+        </dl>
+        <ol class="steps" id="steps"></ol>
+        <p class="note">Laufzeit: Licht im Glasfaserkabel braucht etwa 5 µs pro km. Landwege sind vereinfacht als Luftlinie dargestellt. Typische Route, vereinfacht – echtes Internet-Routing (BGP) folgt auch Verträgen und Preisen.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <strong>LANDFALL</strong> by Julian Harder &middot; Karte: Natural Earth / world-atlas &middot; Kabeldaten: <a href="https://www.submarinecablemap.com" target="_blank" rel="noopener">TeleGeography</a> (CC BY-SA 4.0) &middot; Typische Route, vereinfacht
+  </footer>
+
+  <!-- Alle Bibliotheken und Daten lokal, damit es per Doppelklick läuft -->
+  <script src="lib/d3-array.min.js"></script>
+  <script src="lib/d3-geo.min.js"></script>
+  <script src="lib/topojson-client.min.js"></script>
+  <script src="data/countries.js"></script>
+  <script src="data/cables.js"></script>
+  <script src="data/landings.js"></script>
+  <script src="data/cities.js"></script>
+  <script src="data/landlinks.js"></script>
+  <script src="data/names.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/dijkstra.js"></script>
+  <script src="js/labels.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

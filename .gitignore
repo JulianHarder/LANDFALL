@@ -1,0 +1,17 @@
+# Betriebssystem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editoren
+.vscode/
+.idea/
+*.swp
+*~
+
+# Lokale Arbeitsdateien
+.claude/
+node_modules/
+
+# Ungekürzte Kabeldaten: nur lokal, für tools/prune-data.js (siehe README, Abschnitt Daten und Lizenz)
+data/_voll/
