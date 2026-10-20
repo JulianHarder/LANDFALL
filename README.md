@@ -281,7 +281,8 @@ Die ausführliche Geschichte mit allen Etappen und Messwerten steht in
 - **Bibliotheken** (`lib/`): [d3-array](https://github.com/d3/d3-array),
   [d3-geo](https://github.com/d3/d3-geo) und
   [topojson-client](https://github.com/topojson/topojson-client), jeweils unter
-  ihrer eigenen Lizenz (im Dateikopf).
+  ihrer eigenen Open-Source-Lizenz (Lizenztext im jeweiligen Projekt, Copyright-Hinweis
+  im Dateikopf).
 
 ## Mit KI erstellt
 

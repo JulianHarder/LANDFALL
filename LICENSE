@@ -29,4 +29,6 @@ NICHT davon erfasst sind die Daten und Bibliotheken anderer:
     "Daten und Lizenz"); es gelten deren Bedingungen.
   - data/countries.js                 – Natural Earth / world-atlas
   - lib/                              – d3-array, d3-geo, topojson-client
-                                        (jeweils eigene Lizenz, im Dateikopf)
+                                        (jeweils eigene Lizenz; Lizenztext im
+                                        jeweiligen Projekt, Copyright-Hinweis
+                                        im Dateikopf)
