@@ -77,7 +77,7 @@ LANDFALL/
 
 - Karten von **TeleGeography** stehen laut deren Seite unter **CC BY-SA 4.0**, Namensnennung ist Pflicht (steht in der Fußzeile mit Link).
 - Die **Rohdaten** (Kabel-Datenbank) sind ein kostenpflichtiges Produkt. Das GitHub-Repo, das der Plan nennt, ist nicht mehr erreichbar. Geladen wurde aus der öffentlichen Karten-API von submarinecablemap.com.
-- **Darum:** Das Projekt nur privat nutzen. Vor einer Veröffentlichung Lizenz klären oder die Kabeldaten ersetzen.
+- **Entscheidung vom 20.10.2026:** Das Projekt wurde trotzdem öffentlich gemacht (GitHub-Repo `JulianHarder/LANDFALL` und Kopie im Portfolio), mit Quellenangabe in Fußzeile und README. Das Risiko einer Beanstandung durch TeleGeography trägt Julian. Die ungekürzten Daten (`data/_voll/`) liegen bewusst nicht im Repo. Sollte TeleGeography widersprechen: Kabeldaten ersetzen oder entfernen.
 - Länder: Natural Earth über `world-atlas` (Public Domain).
 
 ## Getestet / nicht getestet
@@ -91,4 +91,4 @@ LANDFALL/
 
 - Mehrere Pakete gleichzeitig, Lernmodus mit Erklärtexten („Warum geht ein Anruf nicht direkt?“), Deutschland-Detail (Landstrecke bis DE-CIX) – aus dem Plan, noch nicht umgesetzt.
 - Landwege sind Luftlinie; die Laufzeit zeigt nur die einfache Strecke ohne Gerätezeiten.
-- Lizenz der Kabeldaten klären, bevor etwas veröffentlicht wird.
+- Lizenz der Kabeldaten ist weiter ungeklärt (siehe Abschnitt „Lizenz und Quellen“); veröffentlicht wurde auf eigenes Risiko.
